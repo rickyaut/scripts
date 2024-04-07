@@ -7,7 +7,14 @@ import os
 import sys
 
 if len(sys.argv) != 8:
-    print("Usage: python3 download-ftp-files.py <HOST> <USERNAME> <PASSWORD> <SRC_FOLDER> <DEST_FOLDER> <MAX_DAYS> <STORAGE_CAPACITY>")
+    print(
+        """
+          Usage: python3 download-ftp-files.py <HOST> <USERNAME> <PASSWORD> <SRC_FOLDER> <DEST_FOLDER> <MAX_DAYS> <STORAGE_CAPACITY>
+          Samples: python3 ~/scripts/download-ftp-files.py '10.0.0.55' 'root' '12345678' '/mnt/record' 'videos' 2 2.5
+            or curl -sSL https://raw.githubusercontent.com/rickyaut/scripts/main/download-ftp-files.py | python3 - '10.0.0.55' 'root' '12345678' '/mnt/record' 'videos' 2 2.5
+            or wget -O - https://raw.githubusercontent.com/rickyaut/scripts/main/download-ftp-files.py | python3 - '10.0.0.55' 'root' '12345678' '/mnt/record' 'videos' 2 2.5
+          """
+    )
     sys.exit(1)
 
 HOST = sys.argv[1] # '10.0.0.55'
