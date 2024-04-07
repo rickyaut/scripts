@@ -125,7 +125,7 @@ def main():
             delete_old_files()
             logging.info("finished download videos")
     except Exception as e:
-        logging.error(print(f"An error occurred: {e}"))
+        logging.error(f'An error occurred: {e}')
 
 if __name__=='__main__':
     main()
