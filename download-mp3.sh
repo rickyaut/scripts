@@ -9,6 +9,5 @@ for i in "${youid[@]}"; do   # access each element of array
   yt-dlp -f "ba" -x --audio-format mp3 $i
 done
 mv *.mp3 mp3
-mv *.mp4 mp4
 
 say Download finished
